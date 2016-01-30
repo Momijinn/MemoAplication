@@ -118,14 +118,13 @@ public class MainActivity extends AppCompatActivity{
         Date_Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final DatePickerDialog Datedia = new DatePickerDialog(MainActivity.this, new DatePickerDialog.OnDateSetListener() {
+                new DatePickerDialog(MainActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                         set_day = String.valueOf(year) + "年" + String.valueOf(monthOfYear + 1) + "月" + String.valueOf(dayOfMonth) + "日";
                         Date_Text.setText(set_day);
                     }
-                }, now_year, now_monthOfYear, now_dayOfMonth);
-                Datedia.show();
+                }, now_year, now_monthOfYear, now_dayOfMonth).show();
             }
         });
         /* 日付を格納するTexitViewには初期値として現在の日付を入れる */
@@ -137,14 +136,13 @@ public class MainActivity extends AppCompatActivity{
         Time_Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final TimePickerDialog Timedia = new TimePickerDialog(MainActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                 new TimePickerDialog(MainActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                         set_time = String.valueOf(hourOfDay) + ":" + String.valueOf(minute);
                         Time_Text.setText(set_time);
                     }
-                }, now_hour, now_minute, true);
-                Timedia.show();
+                }, now_hour, now_minute, true).show();
             }
         });
         /* 時刻を格納するTexitViewには初期値として現在の時刻を入れる */
