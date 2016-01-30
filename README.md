@@ -1,0 +1,2 @@
+# MemoAplication
+SampleWrieReadListviewという名のメモアプリ
